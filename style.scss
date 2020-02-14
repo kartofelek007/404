@@ -1,0 +1,132 @@
+$color: #fff;
+$svgColor: tomato;
+
+body {
+    margin:0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.error404 {
+    position: relative;
+    z-index: 0;
+    width: calc(100% - 40px);
+    color: $svgColor;
+    font-family: sans-serif;
+
+    svg {
+        margin: 50px 0;
+        width: 100%;
+
+        .st0{
+            fill:$svgColor;
+        }
+        .st1{
+            fill:#300303;
+            stroke:$svgColor;
+            stroke-width:10;
+            stroke-miterlimit:10;
+        }
+        .st2{
+            //fill:#FFFFFF;
+        }
+        .st3{
+            fill:none;
+            stroke:$svgColor;
+            stroke-width:8;
+            stroke-linecap:round;
+            stroke-miterlimit:10;
+        }
+        .st4{
+            fill:$svgColor;
+        }
+        #buzia {
+            transition: 0.05s;
+        }
+
+        #buzia-usmiech,
+        #oko-usmiech-l,
+        #oko-usmiech-r {
+            display: none;
+        }
+
+        #oko-l,
+        #oko-r,
+        #oko-usmiech-l,
+        #oko-usmiech-r {
+            transform: translate(var(--moveX), var(--moveY));
+        }
+
+        #buzia-usmiech,
+        #buzia-smutek {
+            transform: translate(var(--moveX), var(--moveY));
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #282d36;
+    }
+
+    p {
+        color: #bbb;
+        font-size: 1rem;
+    }
+
+    a {
+        color: inherit;
+        font-weight: bold;
+        color: tomato;
+    }
+
+    .error404-button {
+        padding: 20px 30px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 20px auto;
+        color: inherit;
+        border:0;
+        color: #fff;
+        background: tomato;
+        border-radius: 50px;
+        box-shadow: 0 24px 10px rgba(tomato, 0.1);
+        transition: 0.5s;
+
+        &:hover {
+            background: darken(tomato, 20);
+        }
+    }
+}
+
+.bg {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 500px) {
+        display: none;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        max-width: 1000px;
+    }
+
+    path {
+        opacity:0.27;
+        fill:#E0DCDC;
+    }
+}
+
+
